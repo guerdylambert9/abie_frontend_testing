@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="All Test Suite">
+    <test verbose="2" preserve-order="true" name="/Users/gmac09/coding/abietesting">
+        <classes>
+            <class name="org.guerdy.lambert.frontend.testcase.LoginTest">
+                <methods><include name="Login_with_No_emailNpassword"/>
+                    <include name="Login_with_right_emailNpassowrd"/>
+                    <include name="Login_with_right_email_wrong_password"/>
+                    <include name="Login_with_wrong_email_right_password"/>
+                    <include name="Login_with_non_existent_user"/>
+                    <include name="ForgotPassword"/>
+                </methods>
+            </class>
+            <class name="org.guerdy.lambert.frontend.testcase.RegisterAppraiserTest">
+                <methods>
+                    <exclude name="Register_Appraiser_With_Freemium_Plan_With_RightCredentials"/>
+                    <exclude name="Register_Appraiser_With_AbieS_Monthly_Plan_With_RightCredentials"/>
+                    <exclude name="Register_Appraiser_With_AbieS_Yearly_Plan_With_RightCredentials"/>
+                    <include name="Register_Appraiser_With_Inactive_LicenseNumber"/>
+                    <include name="Register_Appraiser_with_Active_LicenseNumber_WrongState"/>
+                    <include name="RegisterUser_With_EmptyEmailField"/>
+                    <include name="RegisterUser_With_Email_WithoutCommercial_At"/>
+                    <include name="RegisterUser_With_Email_Without_Dotcom"/>
+                    <include name="RegisterUser_With_Email_Starting_With_Commercial_At"/>
+                    <include name="RegisterUser_With_Email_Starting_With_Dotcom"/>
+                    <include name="RegisterUser_With_Email_Containing_Only_CommercialAt_Gmail_Dotcom"/>
+                    <include name="RegisterUser_With_Password_Less_Than_Min_Length"/>
+                    <include name="RegisterUser_With_Right_Password_Length_Only"/>
+                    <include name="RegisterUser_With_One_Capital_Letter_Password"/>
+                    <include name="RegisterUser_With_RightPasswordLength_OneCapitalLetter_OneNumber"/>
+                    <include name="RegisterUser_With_RightPassword_But_WrongConfirmPassword"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+</suite>
